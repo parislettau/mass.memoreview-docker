@@ -10,12 +10,12 @@ return [
   //   'install' => true
   // ],
   // It's recommended to remove this setting after the installation on your remote server is complete.
-  'url' => '/',
+  'url' => 'https://kirby-mass-memoreview-docker.weucze.easypanel.host/',
 
-  // # https://getkirby.com/docs/reference/system/options/panel
-  // 'panel' => [
-  //   'install' => true
-  // ],
+  # https://getkirby.com/docs/reference/system/options/panel
+  'panel' => [
+    'install' => true
+  ],
   // Login methods
   'auth' => [
     'methods'   => ['password', 'password-reset'],
