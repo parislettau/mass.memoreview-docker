@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     php-mbstring \
     php-xml \
     php-zip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    apt-get nano
 
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
@@ -40,7 +41,6 @@ RUN git clone --depth 1 https://github.com/parislettau/mass.memoreview-docker.gi
 
 # Fix files and directories ownership
 RUN chown -R www-data:www-data /var/www/html/
-
 
 # Activate Apache modules headers & rewrite
 RUN a2enmod headers rewrite
