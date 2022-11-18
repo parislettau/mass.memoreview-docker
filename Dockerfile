@@ -38,7 +38,7 @@ RUN rm /var/www/html/*
 # Clone the Kirby Starterkit
 # ADD https://github.com/$USER/$REPO/git/refs/heads/$BRANCH version.json
 # RUN git clone -b $BRANCH https://github.com/$USER/$REPO.git $HOME/
-RUN git clone https://github.com/parislettau/mass.memoreview-docker.git /var/www/html
+RUN git clone https://github.com/$USER/$REPO.git $HOME
 
 # Fix files and directories ownership
 RUN chown -R www-data:www-data /var/www/html/
