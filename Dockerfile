@@ -36,7 +36,9 @@ COPY default.conf /etc/apache2/sites-available/000-default.conf
 RUN rm /var/www/html/*
 
 # Clone the Kirby Starterkit
-RUN git clone --depth 1 https://github.com/parislettau/mass.memoreview-docker.git /var/www/html
+# ADD https://github.com/$USER/$REPO/git/refs/heads/$BRANCH version.json
+# RUN git clone -b $BRANCH https://github.com/$USER/$REPO.git $HOME/
+RUN git clone https://github.com/parislettau/mass.memoreview-docker.git /var/www/html
 
 # Fix files and directories ownership
 RUN chown -R www-data:www-data /var/www/html/
