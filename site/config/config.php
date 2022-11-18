@@ -10,7 +10,7 @@ return [
   //   'install' => true
   // ],
   // It's recommended to remove this setting after the installation on your remote server is complete.
-  // 'url' => 'https://mass-memoreview-docker.memoreview.net/',
+  'url' => 'https://kirby-mass-memoreview-docker.weucze.easypanel.host/',
 
   # https://getkirby.com/docs/reference/system/options/panel
   'panel' => [
